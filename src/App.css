@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -35,4 +38,55 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.row1 {
+  padding: 20px;
+}
+
+.row2 {
+  margin-top: 40px;
+  padding: 20px
+}
+
+.switch {
+  margin-top: 10px;
+  background-color: rgb(227, 204, 204);
+  margin-top: 10px;
+}
+
+.top {
+  margin-top: 20px
+}
+
+.box {
+  width: 400px;
+  height: 150px;
+  align-self: center;
+}
+
+.light {
+  background-color: rgb(229, 229, 73);
+}
+
+.temp {
+  background-color: rgba(255, 102, 0, 0.656);
+}
+
+.humidity {
+  background-color: rgb(40, 199, 40);
+}
+
+.all {
+  display: flex;
+  border-radius: 10px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bulb {
+  margin-right: 50px;
 }

@@ -49,21 +49,21 @@ function App() {
     <div className="App">
       <Row>
         <Col span={8} className='row1 box' >
-          <div className='temp all'>
+          <div className='temp all flexable'>
             <h3>Nhiệt độ</h3>
             <h2>20</h2>
           </div>
         </Col>
         <Col span={8} className='row1 box' >
-          <div className='humidity all'>
-            <h3>Độ ẩm</h3>
-            <h2>80%</h2>
+          <div className='humidity all flexable'>
+            <Row><h3>Độ ẩm</h3></Row>
+            <Row> <h2>80%</h2></Row>
           </div>
         </Col>
         <Col span={8} className='row1 box'>
-          <div className='light all'>
-            <h3>Ánh sáng</h3>
-            <h2>100 lux</h2>
+          <div className='light all flexable'>
+            <Row><h3>Ánh sáng</h3></Row>
+            <Row><h2>100 lux</h2></Row>
           </div>
         </Col>
       </Row>
@@ -72,7 +72,7 @@ function App() {
           <Line data={data} />
          </Col>
         <Col span={8} className='row2' >
-          <Row className='row1 box top'>
+          <Row className='row1 box'>
             <Col span={24} className='all switch'>
               <Image className='bulb' src={isOnBlub ? 'blub-on-removebg-preview.png': 'blub-off-removebg-preview.png'} width={80} style={{marginRight: 30}} preview={false}/>
               <Switch size="default" checked={isOnBlub} onClick={onToggleBlub} />

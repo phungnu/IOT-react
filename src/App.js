@@ -4,6 +4,7 @@ import { Line } from "react-chartjs-2";
 import { Row, Col,Switch, Image } from 'antd';
 import Chart from 'chart.js/auto';
 import {CategoryScale} from 'chart.js'; 
+import { useState } from 'react';
 Chart.register(CategoryScale);
 
 const data = {
@@ -31,6 +32,19 @@ const data = {
 };
 
 function App() {
+
+  const [isOnBlub, setIsOnBlub] = useState(false);
+
+  const onToggleBlub = () => {
+    setIsOnBlub(!isOnBlub);
+  }
+
+  const [isOnFan, setIsOnFan] = useState(false);
+
+  const onToggleFan = () => {
+    setIsOnFan(!isOnFan);
+  }
+
   return (
     <div className="App">
       <Row>
@@ -60,14 +74,14 @@ function App() {
         <Col span={8} className='row2' >
           <Row className='row1 box top'>
             <Col span={24} className='all switch'>
-              <Image className='bulb' src={'/2779262.png'} width={60} preview={false}/>
-              <Switch size="default" defaultChecked />
+              <Image className='bulb' src={isOnBlub ? 'blub-on-removebg-preview.png': 'blub-off-removebg-preview.png'} width={80} style={{marginRight: 30}} preview={false}/>
+              <Switch size="default" checked={isOnBlub} onClick={onToggleBlub} />
             </Col>
           </Row>
           <Row className='row1 box top'>
             <Col span={24} className='all switch'>
-              <Image className='bulb' src={'/fan.png'} width={60} preview={false}/>
-              <Switch size="default" defaultChecked />
+              <Image className='bulb' src={isOnFan ? 'fan-on-unscreen.gif': 'fan-off-removebg-preview.png'} width={120} preview={false}/>
+              <Switch size="default" checked={isOnFan} onClick={onToggleFan} />
             </Col>
           </Row>
         </Col>

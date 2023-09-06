@@ -90,3 +90,9 @@
 .bulb {
   margin-right: 100px;
 }
+
+.fan {
+  animation-duration: .1s; 
+  /* animation-timing-function: steps(1, end);  */
+  /* animation-iteration-count: infinite; */
+}

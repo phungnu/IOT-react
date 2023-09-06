@@ -80,7 +80,7 @@ function App() {
           </Row>
           <Row className='row1 box top'>
             <Col span={24} className='all switch'>
-              <Image className='bulb' src={isOnFan ? 'fan-on-unscreen.gif': 'fan-off-removebg-preview.png'} width={120} preview={false}/>
+              <Image className='fan' src={isOnFan ? 'fan-on-unscreen.gif': 'fan-off-removebg-preview.png'} width={120} preview={false}/>
               <Switch size="default" checked={isOnFan} onClick={onToggleFan} />
             </Col>
           </Row>
